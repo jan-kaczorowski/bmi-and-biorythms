@@ -42,7 +42,6 @@ OKRES:
 budujemy klasę która będzie to obliczać
 
 
-
 ## Etap 3
 
 Robimy proste 2 formularze które pozwalają obliczać BMI i Biorytmy
