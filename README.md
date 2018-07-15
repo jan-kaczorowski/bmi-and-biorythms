@@ -1,24 +1,55 @@
-# README
+# Cwiczenia
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Etap 0
 
-* Ruby version
+robimy nowy projekt w rails
+baza danych - sqlite
 
-* System dependencies
 
-* Configuration
+## Etap 1
 
-* Database creation
+### Business: 
+1) system ma być zdolny do liczenia BMI na podstawie *wagi* i *wzrostu* w metrach.
+2) system ma zwracać a) BMI - liczba b) komunikat - czy ktoś ma wagę normalną, niedowagę czy nadwagę
 
-* Database initialization
 
-* How to run the test suite
+### wzór BMI:
+waga_w_kg / (wzrost_w_metrach)^2
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+### ToDo
+budujemy klasę która będzie to obliczać
 
-* ...
+
+## Etap 2
+
+### Business:
+1) system ma być zdolny do liczenia 3 biorytmów (intelektualny, fizyczny, emocjonalny) na podstawie daty urodzenia człowieka
+2) system ma zwracać wyniki 3 biorytmów, trendy (opadający, wznoszący) i prognozy na X następnych dni 
+
+
+### wzór obliczania biorytmów:
+ogólny: 2*PI*T/OKRES, gdzie:
+
+T - to ilość dni życia od dnia urodzin
+OKRES:
+	- dla intelektualnego:		33 dni
+	- dla fizycznego: 			23 dni
+	- dla emocjonalnego:		28 dni
+
+### ToDo
+budujemy klasę która będzie to obliczać
+
+
+
+## Etap 3
+
+Robimy proste 2 formularze które pozwalają obliczać BMI i Biorytmy
+
+
+
+
+## Etap 4
+
+Robimy proste API, które pozwala wyciągnąć BMI i Biorytmy z pominięciem layoutu

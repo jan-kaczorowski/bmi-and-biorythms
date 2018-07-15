@@ -1,8 +1,7 @@
-
-class HomeController < ApplicationController
+class Api::ServicesController <  ActionController::API
 
     def index
-    	
+        render json: {status: 'wszystko OK! :-)'}.to_json
     end
 
     def bmi 
@@ -12,9 +11,9 @@ class HomeController < ApplicationController
     	height = params[:height].sub(',','.').to_f/100
 
         # obliczanie wyników
-    	@bmi_results = service.calculate( { weight: weight, height: height })
+    	bmi_results = service.calculate( { weight: weight, height: height })
         # zwracanie jako json
-
+    	render json: bmi_results.to_json
     end
 
 
@@ -22,9 +21,9 @@ class HomeController < ApplicationController
     	service = BiorythmService.new # tworzenie instancji klasy serwisu
     	bdate = Date.parse(params[:birth_date]) #obsługa parametrów
         # obliczanie wyników
-    	@biorythm_results = service.calculate(bdate)
+    	biorythm_results = service.calculate(bdate)
         # zwracanie jako json
-
+    	render json: biorythm_results.to_json
     end
 
 end

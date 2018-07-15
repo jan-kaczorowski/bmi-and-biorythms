@@ -1,0 +1,26 @@
+<h1>Obliczanie BMI i Biorytmów</h1>
+
+<br>
+<br>
+
+<h2>Oblilczanie BMI</h2>
+
+<%= form_tag("/bmi", method: "get") do %>
+  <%= label_tag(:height, "Podaj wzrost w centymentrach:") %>
+  <%= text_field_tag(:height) %>
+  <%= label_tag(:weight, "Podaj wagę w kilogramach:") %>
+  <%= text_field_tag(:weight) %>
+  <%= submit_tag("Oblicz") %>
+<% end %>
+
+
+<br>
+<br>
+
+<h2>Oblilczanie Biorytmów</h2>
+
+<%= form_tag("/biorythms", method: "get") do %>
+  <%= label_tag(:birth_date, "Podaj datę urodzenia w formacie YYYY-MM-DD:") %>
+  <%= text_field_tag(:birth_date) %>
+  <%= submit_tag("Oblicz") %>
+<% end %>

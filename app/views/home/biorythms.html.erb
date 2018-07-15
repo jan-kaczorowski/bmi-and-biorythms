@@ -1,0 +1,28 @@
+
+<h3>Twoje biorytmy</h3>
+
+<h4>Przeżyłeś do tej pory dni</h4>
+<%= @biorythm_results.days_since_birthday %>
+
+<br>
+<h4>Biorytm intelektualny</h4>
+<dl>
+	<dt>Wynik</dt>
+	<dd><%= @biorythm_results.intellectual.rating %></dd>
+
+	<dt>Trend</dt>
+	<dd><%= @biorythm_results.intellectual.is_raising ? 'Wznoszący' : 'Opadający' %></dd>
+
+	<dt>Bieżący stan</dt>
+	<dd><%= @biorythm_results.intellectual.condition %></dd>
+
+	<dt>Prognoza na następne dni</dt>
+	<dd>
+		<ul>
+		<% @biorythm_results.intellectual.forecast.each_with_index do |rating, ind| %>
+			<li>Dzień <%= ind+1 %>  :  <%= rating %></li>
+		<% end %>
+		</ul>	
+	</dd>
+
+</dl>

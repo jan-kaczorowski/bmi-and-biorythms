@@ -1,8 +1,8 @@
 
 class BmiService
 
-	def calculate(height, weight)
-		bmi = (weight / height**2).round(4)
+	def calculate(args)
+		bmi = (args[:weight] / args[:height]**2).round(4)
 		{
 			bmi: bmi,
 			diagnose: diagnose(bmi)
