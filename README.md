@@ -54,3 +54,13 @@ Robimy proste 2 formularze które pozwalają obliczać BMI i Biorytmy
 ## Etap 4
 
 Robimy proste API, które pozwala wyciągnąć BMI i Biorytmy z pominięciem layoutu
+
+
+
+# Odpalanie w Dockerze
+
+cd do folderu
+```shell
+docker build -t biorythms:latest .
+docker run --name biorythms_app -p 3000:3000 biorythms:latest
+```
