@@ -1,5 +1,7 @@
 # Cwiczenia
 
+projekt dostępny pod adresem biorythms.jankaczorowski.pl
+
 
 ## Etap 0
 
