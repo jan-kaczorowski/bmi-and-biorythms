@@ -9,7 +9,7 @@ class Api::ServicesController <  ActionController::API
         #obsługa parametrów
     	weight = params[:weight].to_f
     	height = params[:height].sub(',','.').to_f/100
-
+        
         # obliczanie wyników
     	bmi_results = service.calculate( { weight: weight, height: height })
         # zwracanie jako json

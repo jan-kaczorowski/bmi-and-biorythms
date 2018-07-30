@@ -8,8 +8,11 @@
 <%= form_tag("/bmi", method: "get") do %>
   <%= label_tag(:height, "Podaj wzrost w centymentrach:") %>
   <%= text_field_tag(:height) %>
+
+
   <%= label_tag(:weight, "Podaj wagę w kilogramach:") %>
   <%= text_field_tag(:weight) %>
+  
   <%= submit_tag("Oblicz") %>
 <% end %>
 

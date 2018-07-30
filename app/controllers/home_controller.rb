@@ -11,7 +11,10 @@ class HomeController < ApplicationController
     	weight = params[:weight].to_f
     	height = params[:height].sub(',','.').to_f/100
 
+        # sub albo gsub
+
         # obliczanie wyników
+
     	@bmi_results = service.calculate( { weight: weight, height: height })
         # zwracanie jako json
 
@@ -28,3 +31,7 @@ class HomeController < ApplicationController
     end
 
 end
+
+
+
+
