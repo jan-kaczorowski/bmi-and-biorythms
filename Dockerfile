@@ -11,6 +11,6 @@ RUN bundle install
 
 COPY . .
 
-EXPOSE 3000
+#EXPOSE 3000
 
 CMD bash run.sh
